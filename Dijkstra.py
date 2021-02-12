@@ -32,6 +32,7 @@ class Solution(object):
                 fromVertex[arrivedVertex] = fromV
                 for e in graph[arrivedVertex]:
                     heapq.heappush(CostFromSource, (e[2] + cost, e[1], arrivedVertex))
+        # log(a*b)=log(a)+log(b)
         return 0.0 if minDistances[end]==None else 2 ** (-1 * minDistances[end])
 
 
